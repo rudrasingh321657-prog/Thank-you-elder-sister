@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আমার প্রিয় দিদি ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background: radial-gradient(circle, #42265f, #090b19);
+}
+
+.wrap {
+  padding: 35px 15px;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  color: #ffe5f2;
+  font-size: 40px;
+  text-shadow: 0 0 25px pink;
+}
+
+.intro {
+  line-height: 1.8;
+  color: #e9dff7;
+}
+
+.gift-area {
+  margin: 50px auto;
+  cursor: pointer;
+  width: 190px;
+  height: 175px;
+  position: relative;
+}
+
+.gift {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 150px;
+  height: 105px;
+  border-radius: 8px;
+  background: #ff4f91;
+}
+
+.gift:before {
+  content: "";
+  position: absolute;
+  left: 62px;
+  width: 26px;
+  height: 100%;
+  background: #ffe6a8;
+}
+
+.lid {
+  position: absolute;
+  left: 10px;
+  top: 47px;
+  width: 170px;
+  height: 32px;
+  background: #ff8bb0;
+  border-radius: 7px;
+  z-index: 2;
+  transition: 0.8s;
+}
+
+.gift-area.open .lid {
+  transform: rotate(-28deg) translate(-18px,-22px);
+}
+
+.bow {
+  position: absolute;
+  top: 20px;
+  left: 68px;
+  width: 54px;
+  height: 30px;
+  z-index: 3;
+}
+
+.bow:before,
+.bow:after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 22px;
+  border: 7px solid #ffe6a8;
+  border-radius: 50%;
+}
+
+.bow:before {
+  left: 0;
+}
+
+.bow:after {
+  right: 0;
+}
+
+.tap {
+  color: pink;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.3; }
+}
+
+.poem {
+  display: none;
+  margin: 25px auto;
+  padding: 25px 15px;
+  border: 1px solid pink;
+  border-radius: 20px;
+  background: #ffffff12;
+  line-height: 2;
+}
+
+.poem.show {
+  display: block;
+}
+
+.poem h2 {
+  color: #ffd7eb;
+  font-size: 30px;
+}
+
+.line {
+  opacity: 0;
+  transform: translateY(15px);
+  font-size: 18px;
+  line-height: 2;
+}
+
+.line.visible {
+  animation: appear 0.8s forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final {
+  color: #ffd1e8;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  background: pink;
+  color: #54203e;
+  font-weight: bold;
+}
+
+.star {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  50% { opacity: 0.2; }
+}
+
+.floating {
+  position: fixed;
+  bottom: -30px;
+  font-size: 22px;
+  animation: floatUp 5s linear forwards
